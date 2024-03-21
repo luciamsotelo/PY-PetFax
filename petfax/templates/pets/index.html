@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <nav>
         <ul class="navbar">
             <h1>Welcome to PetFax</h1>
@@ -17,9 +18,12 @@
             
         </ul>
     </nav>
-    {% block content %}
-  
-    {% endblock %}
+
+    {% for pet in pets %}
+        <h2>{{pet.pet_name}}</h2>
+        <p>{{pet.pet_fact}}</p>
+        <img src="{{pet.pet_photo}}" alt="Photo of pet">
+    {% endfor %}
 </body>
 
 </html>
